@@ -1,0 +1,99 @@
+/* стиль для планшетной версии до 768px*/
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+
+  .header-inner {
+    width: 100%;
+    height: 50px;
+    position: relative;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-image {
+    width: 80px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .contact a {
+    font-size: 18px;
+  }
+
+  .hamb-menu {
+    display: block;
+    width: 35px;
+    height: 26px;
+    border: 1px solid #000;
+    position: absolute;
+    right: 10px;
+  }
+  .hamp-item {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    left: calc(50% - 12px);
+    transition: 0.5s;
+    transform-origin: 50% 50%;
+  }
+  .hamp-item-1 {
+    top: 7px;
+  }
+  .hamp-item-2 {
+    top: 12px;
+  }
+  .hamp-item-3 {
+    top: 17px;
+  }
+  .hamb-menu:hover .hamp-item-1 {
+    transform: rotate(45deg);
+    /* left: calc(50% - 12px); */
+    top: calc(50%);
+  }
+  .hamb-menu:hover .hamp-item-3 {
+    transform: rotate(-45deg);
+    /* left: calc(50% -12px); */
+    top: calc(50%);
+  }
+  .hamb-menu:hover .hamp-item-2 {
+    transform: scale(0);
+  }
+
+  .link__call {
+    display: none;
+  }
+
+  .contact {
+    margin-right: 70px;
+  }
+
+  .promo h1{
+    font-size: 25px;
+    margin-bottom: 100px;
+    margin-top: 0;
+  }
+
+  .promo-text{
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  .promo-text h3{
+    font-size: 16px;
+  }
+
+  .btn-cta{
+    margin-bottom: 200px;
+    margin-top: 0;
+  }
+}

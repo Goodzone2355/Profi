@@ -1,0 +1,23 @@
+/* стиль для мобильной версии до 576px*/
+@media (max-width: 576px) {
+    .promo h1{
+        font-size: 20px;
+        margin-bottom: 100px;
+        margin-top: 0;
+      }
+    
+      .promo-text{
+        margin-bottom: 20px;
+        margin-top: 0px;
+      }
+
+      .promo-text h3{
+        font-size: 12px;
+      }
+    
+      .btn-cta{
+        margin-bottom: 200px;
+        margin-top: 0;
+      }
+
+}
