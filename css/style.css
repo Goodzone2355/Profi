@@ -407,7 +407,7 @@ img {
 }
 
 .sale-inner{
-  background: url(/img/sale/sale.jpg);
+  background: url(../img/sale/sale.png);
   height: 70vh;
   display: flex;
   flex-direction: row;
