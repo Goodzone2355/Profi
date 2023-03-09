@@ -20,4 +20,29 @@
         margin-top: 0;
       }
 
+      .container{
+        padding: 0 5px;
+      }
+
+      .contact_a{ 
+        width: 140px;
+        margin-left: 10px;
+      }
+
+      .service{
+        min-width: 290px;
+      }
+    
+      .project{
+        min-width: 290px;
+      }
+    
+      .advantage{
+        min-width: 290px;
+        margin-bottom: calc(var(--index) * 3) ;
+      }
+    
+      input[type="submit"]{
+        padding: 15px 80px;
+      }
 }

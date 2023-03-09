@@ -3,6 +3,108 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face{
+  font-family: "Roboto Condensed";
+  src: url(../fonts/RobotoCondensed-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Roboto Condensed";
+  src: url(../fonts/RobotoCondensed-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Hind Madurai";
+  src: url(../fonts/HindMadurai-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Hind Madurai";
+  src: url(../fonts/HindMadurai-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat-Bold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --index: calc(1vw + 1vh);
+  --primery-color: #ffffff;
+  --secondary-color: #E4E5E0;
+  --accent-color: #385529;
+  --text-color: #18191B;
+}
+
+h1{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+h2{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+h3{
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+title{
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+text{
+  font-family: 'Hind Madurai';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.title{
+  margin-bottom: calc(var(--index) * 2)
+}
+ 
 ul,
 ol {
   list-style: none;
@@ -11,20 +113,22 @@ a {
   text-decoration: none;
   color: #09606b;
 }
+
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #000;
+  color: var(--text-color);
 }
 .container {
   width: 1320px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* header */
 .header {
-  background: lightgrey;
+  background: var(--secondary-color);
 }
 
 .header-inner {
@@ -47,7 +151,7 @@ body {
   margin: 0 0.4vw;
 }
 .header-inner a {
-  color: #000;
+  color: var(--text-color);
   font-size: 24px;
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
 }
@@ -70,6 +174,7 @@ img {
   background: #ddd url(../img/Rectangle\ 1.png) no-repeat 50% 50%;
   background-size: cover;
   background-attachment: fixed;
+  margin-bottom: calc(var(--index) * 2)
 }
 
 .promo-inner {
@@ -86,40 +191,45 @@ img {
   font-weight: 600;
   font-size: 40px;
   line-height: 49px;
-  color: #ffffff;
+  color: var(--primery-color);
   margin-bottom: 250px;
   text-align: center;
 }
 
 .promo h3 {
+  font-family: "Roboto Condensed";
   display: flex;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 22px;
   line-height: 26px;
-  color: #ffffff;
+  color: var(--primery-color);
   text-align: center;
 }
 
 .promo-text{
-  margin-bottom: 50px;
+  margin-bottom: calc(var(--index) * 2);
   text-align: center;
 }
 
 .btn-cta {
-  color: white;
+  color: var(--primery-color);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 5px 14px;
   gap: 10px;
-  background: #385529;
+  background: var(--accent-color);
   border-radius: 18px;
 }
 
+.company{
+  margin-bottom: calc(var(--index) * 2);
+}
+
 .company-inner {
-  margin-top: 60px;
+  margin-top: calc(var(--index) * 2);
   width: 100%;
   height: 30vh;
   display: flex;
@@ -129,7 +239,7 @@ img {
 }
 
 .text{
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Hind Madurai", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 28px;
 }
@@ -150,4 +260,217 @@ img {
 .compamy-image{
   object-fit: cover;
   height: 30vh
+}
+
+.services{
+  margin-bottom: calc(var(--index) * 2);
+}
+
+.services-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service{
+  flex: 1 1 27%;
+  max-width: 360px;
+  min-width: 300px;
+  height: calc(var(--index * 15));
+  min-height: 220px;
+  position: relative;
+  background-color: rgba(244, 242, 242, 0.35);
+  margin-bottom: calc(var(--index)) ;
+}
+
+
+.service-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-fig{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.svg-service{
+  width: 60px;
+  height: 60px;
+  align-self: end;
+  margin-bottom: 5px;
+  padding-right: 5px;
+}
+
+.svg-service path{
+  fill: var(--accent-color);
+}
+
+.service-title{
+  color: var(--accent-color);
+  margin-left: var(--index);
+  margin-top: var(--index);
+}
+
+.service:hover{
+  background: none;
+
+}
+
+.service-fig:hover{
+  display: none;
+}
+
+.project-figure{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.projects{
+  margin-bottom: calc(var(--index) * 2);
+}
+
+.project{
+  flex: 1 1 45%;
+  max-width: 630px;
+  min-width: 300px;
+  height: calc(var(--index * 20));
+  min-height: 300px;
+  position: relative;
+  margin-bottom: calc(var(--index));
+}
+
+
+.project-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.advantages{
+  margin-bottom: calc(var(--index) * 2);
+}
+
+.advantage-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.advantage{
+  display: flex;
+  flex: 1 1 27%;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 360px;
+  min-width: 300px;
+  height: calc(var(--index * 15));
+  min-height: 250px;
+  margin-bottom: calc(var(--index)) ;
+}
+
+.examples-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.examples-text{
+  display: flex;
+  flex: 1 1 27%;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 360px;
+  min-width: 300px;
+  height: calc(var(--index * 15));
+  min-height: 250px;
+  margin-bottom: calc(var(--index)) ;
+}
+
+.examples{
+  margin-bottom: calc(var(--index) * 2);
+}
+
+.sale-inner{
+  background: url(/img/sale/sale.jpg);
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sale-inner-text{
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: var(--index);
+  flex-wrap: wrap;
+}
+
+.block-form{
+  margin-right: var(--index);
+  background-color: #fff;
+  height: 50%;
+  padding-left: var(--index);
+  padding-right: var(--index);
+}
+
+input{
+  outline: 0;
+  vertical-align: middle;
+}
+
+.form-control.group-column{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--index);
+}
+
+.form-control-submit{
+  text-align: center;
+}
+
+input[type="submit"]{
+  padding: 15px 50px;
+  border-radius: 30px;
+  border: 0;
+  margin-bottom: 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-transform: uppercase;
+}
+
+.block-form-h3{
+  margin-top: var(--index);
+  margin-bottom: var(--index);
+}
+
+.form-control.checkbox{
+  margin-bottom: var(--index);
+}
+
+.block-form-feedback-text{
+  margin-bottom: calc(var(--index) * 0.5);
+}
+
+.sale-inner-text2{
+  display: none;
 }
